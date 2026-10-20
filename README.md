@@ -51,7 +51,13 @@ O build gera os arquivos estáticos do site em `dist/client`. Publique **o conte
 
 ### GitHub Pages
 
-Configure a publicação do GitHub Pages para gerar o projeto com `npm run build` e publicar `dist/client` como artefato do site. Se o site for publicado em um endereço de projeto (por exemplo, `usuario.github.io/nome-do-repositorio`), confira se os caminhos dos arquivos estáticos funcionam nesse endereço.
+O repositório inclui um workflow que compila e publica o site no GitHub Pages sempre que há um push na branch `main`. Para ativar:
+
+1. No GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment**, selecione **GitHub Actions** como origem.
+3. Envie alterações para `main` ou execute manualmente o workflow **Publicar no GitHub Pages**, na aba **Actions**.
+
+O site será publicado em `https://cargnieli2016.github.io/hijau-piscinas/`. O workflow configura automaticamente o caminho do projeto para que os arquivos e a rota funcionem nesse endereço.
 
 ### Cloudflare Pages
 

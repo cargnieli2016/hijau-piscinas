@@ -4,9 +4,14 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+const githubPagesBasePath = process.env.GITHUB_PAGES_BASE_PATH;
+
 export default defineConfig({
   plugins: [
     tanstackStart({
+      router: {
+        basepath: githubPagesBasePath ?? "/",
+      },
       server: { entry: "server" },
       prerender: {
         enabled: true,
@@ -18,7 +23,7 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
-  base: "./",
+  base: githubPagesBasePath ? `${githubPagesBasePath}/` : "./",
   build: {
     outDir: "dist",
   },
