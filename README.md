@@ -55,9 +55,9 @@ O repositório inclui um workflow que compila e publica o site no GitHub Pages s
 
 1. No GitHub, abra **Settings → Pages**.
 2. Em **Build and deployment**, selecione **GitHub Actions** como origem.
-3. Envie alterações para `main` ou execute manualmente o workflow **Publicar no GitHub Pages**, na aba **Actions**.
+3. A publicação começa automaticamente quando uma alteração é enviada para `main`. Não é necessário iniciar o workflow manualmente.
 
-O site será publicado em `https://cargnieli2016.github.io/hijau-piscinas/`. O workflow configura automaticamente o caminho do projeto para que os arquivos e a rota funcionem nesse endereço.
+O workflow gera o site e publica o conteúdo de `dist/client` em `https://cargnieli2016.github.io/hijau-piscinas/`, configurando o caminho do projeto para que os arquivos funcionem nesse endereço. A primeira publicação pode levar alguns minutos; acompanhe o workflow **Publicar no GitHub Pages** na aba **Actions**.
 
 ### Cloudflare Pages
 
